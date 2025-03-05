@@ -12,7 +12,7 @@
 [![Vue Router](https://img.shields.io/badge/Vue_Router-4.x-4FC08D.svg?style=flat&logo=vue.js)](https://router.vuejs.org/)
 [![Vue I18n](https://img.shields.io/badge/Vue_I18n-9.x-4FC08D.svg?style=flat&logo=vue.js)](https://vue-i18n.intlify.dev/)
 
-<div align="right">
+<div align="center">
   <a href="README.zh-CN.md">中文</a> | <a href="README.md">English</a>
 </div>
 
