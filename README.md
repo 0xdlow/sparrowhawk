@@ -13,94 +13,94 @@
 [![Vue I18n](https://img.shields.io/badge/Vue_I18n-9.x-4FC08D.svg?style=flat&logo=vue.js)](https://vue-i18n.intlify.dev/)
 
 <div align="right">
-  <a href="README.md">中文</a> | <a href="README.en.md">English</a>
+  <a href="README.zh-CN.md">中文</a> | <a href="README.md">English</a>
 </div>
 
-现代化的Vue 3 + TypeScript前端项目模板，集成了多种实用功能和最佳实践。
+A modern Vue 3 + TypeScript front-end project template with various practical features and best practices.
 
-## ✨ 特性
+## ✨ Features
 
-- 🔧 **Vue 3 + TypeScript** - 基于Vue 3的Composition API和TypeScript，提供类型安全和更好的开发体验
-- ⚡ **Vite构建** - 使用Vite作为构建工具，提供极速的开发服务器和优化的生产构建
-- 📦 **Pinia状态管理** - 集成Pinia状态管理，提供简单直观的状态管理解决方案
-- 🧭 **Vue Router** - 内置Vue Router，支持路由守卫和动态路由
-- 🌐 **国际化支持** - 集成Vue I18n，支持多语言切换
-- 🔌 **API集成** - 预配置的API服务，支持请求拦截、错误处理和认证
+- 🔧 **Vue 3 + TypeScript** - Based on Vue 3's Composition API and TypeScript, providing type safety and better development experience
+- ⚡ **Vite Build** - Using Vite as the build tool for lightning-fast development server and optimized production builds
+- 📦 **Pinia State Management** - Integrated Pinia state management for simple and intuitive state management solutions
+- 🧭 **Vue Router** - Built-in Vue Router with support for route guards and dynamic routing
+- 🌐 **Internationalization** - Integrated Vue I18n with support for multiple languages
+- 🔌 **API Integration** - Pre-configured API services with request interception, error handling, and authentication
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 使用此模板
+### Using This Template
 
-#### 方法1：通过GitHub界面使用模板
+#### Method 1: Using the GitHub Interface
 
-1. 点击仓库页面顶部的 "Use this template" 按钮
-2. 输入新仓库的名称和描述
-3. 选择公开或私有仓库
-4. 点击 "Create repository from template"
+1. Click the "Use this template" button at the top of the repository page
+2. Enter a name and description for your new repository
+3. Choose public or private repository
+4. Click "Create repository from template"
 
-#### 方法2：克隆并手动设置
+#### Method 2: Clone and Set Up Manually
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/0xdlow/sparrowhawk.git my-project
 
-# 进入项目目录
+# Navigate to the project directory
 cd my-project
 
-# 删除原有的Git历史
+# Remove the original Git history
 rm -rf .git
 
-# 初始化新的Git仓库
+# Initialize a new Git repository
 git init
 git add .
 git commit -m "Initial commit from Sparrowhawk template"
 
-# 链接到你的远程仓库（如果有）
+# Link to your remote repository (if you have one)
 git remote add origin https://github.com/0xdlow/my-project.git
 git push -u origin main
 ```
 
-### 安装依赖
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 启动开发服务器
+### Start Development Server
 
 ```bash
 npm run dev
 ```
 
-### 构建生产版本
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 src/
-├── api/            # API相关代码
-│   ├── config/     # API配置
-│   ├── helpers/    # API辅助函数
-│   └── services/   # API服务
-├── assets/         # 静态资源
-├── components/     # Vue组件
-├── config/         # 应用配置
-├── i18n/           # 国际化
-│   └── locales/    # 语言文件
-├── layouts/        # 布局组件
-├── routes/         # 路由配置
-├── stores/         # Pinia状态存储
-├── styles/         # 全局样式
-├── types/          # TypeScript类型定义
-├── utils/          # 工具函数
-└── views/          # 页面组件
+├── api/            # API related code
+│   ├── config/     # API configuration
+│   ├── helpers/    # API helper functions
+│   └── services/   # API services
+├── assets/         # Static assets
+├── components/     # Vue components
+├── config/         # Application configuration
+├── i18n/           # Internationalization
+│   └── locales/    # Language files
+├── layouts/        # Layout components
+├── routes/         # Route configuration
+├── stores/         # Pinia state stores
+├── styles/         # Global styles
+├── types/          # TypeScript type definitions
+├── utils/          # Utility functions
+└── views/          # Page components
 ```
 
-## 🛠️ 技术栈
+## 🛠️ Technology Stack
 
 - [Vue.js 3](https://vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -109,31 +109,31 @@ src/
 - [Vue Router](https://router.vuejs.org/)
 - [Vue I18n](https://vue-i18n.intlify.dev/)
 
-## 🔌 API使用
+## 🔌 API Usage
 
-项目预配置了完整的API服务结构，包括请求拦截、错误处理、认证和重试机制。
+The project has a pre-configured complete API service structure, including request interception, error handling, authentication, and retry mechanisms.
 
-### API服务结构
+### API Service Structure
 
 ```
 src/api/
-├── config/             # API配置
-│   ├── index.ts        # 基础配置（基础URL、超时等）
-│   └── interceptors.ts # 请求/响应拦截器
-├── helpers/            # API辅助函数
-│   ├── authHelper.ts   # 认证相关辅助函数
-│   ├── cancelHelper.ts # 请求取消辅助函数
-│   ├── errorHandler.ts # 错误处理
-│   └── retryHelper.ts  # 请求重试机制
-├── services/           # API服务
-│   └── userService.ts  # 用户相关API
-└── index.ts            # API入口
+├── config/             # API configuration
+│   ├── index.ts        # Basic configuration (base URL, timeout, etc.)
+│   └── interceptors.ts # Request/response interceptors
+├── helpers/            # API helper functions
+│   ├── authHelper.ts   # Authentication related helpers
+│   ├── cancelHelper.ts # Request cancellation helpers
+│   ├── errorHandler.ts # Error handling
+│   └── retryHelper.ts  # Request retry mechanism
+├── services/           # API services
+│   └── userService.ts  # User-related APIs
+└── index.ts            # API entry point
 ```
 
-### 使用示例
+### Usage Example
 
 ```typescript
-// 导入API服务
+// Import API service
 import { userService } from '@/api/services/userService';
 import { defineComponent, ref } from 'vue';
 
@@ -161,9 +161,9 @@ export default defineComponent({
 });
 ```
 
-### 创建新的API服务
+### Creating a New API Service
 
-1. 在 `src/api/services/` 目录下创建新的服务文件，例如 `productService.ts`：
+1. Create a new service file in the `src/api/services/` directory, for example `productService.ts`:
 
 ```typescript
 import apiClient from '../index';
@@ -178,67 +178,67 @@ export const productService = {
 };
 ```
 
-2. 在需要的组件中导入并使用：
+2. Import and use in your components:
 
 ```typescript
 import { productService } from '@/api/services/productService';
 
-// 使用服务
+// Use the service
 const products = await productService.getProducts();
 ```
 
-## 🔧 自定义配置
+## 🔧 Custom Configuration
 
-### 环境变量
+### Environment Variables
 
-创建 `.env.local` 文件来设置本地环境变量：
+Create a `.env.local` file to set local environment variables:
 
 ```
 VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
-### 添加新的语言
+### Adding New Languages
 
-1. 在 `src/i18n/locales/` 目录下创建新的语言文件
-2. 在 `src/i18n/index.ts` 中导入并注册新语言
+1. Create a new language file in the `src/i18n/locales/` directory
+2. Import and register the new language in `src/i18n/index.ts`
 
 ## 🔄 CI/CD
 
-本项目配置了完整的CI/CD流程，确保代码质量和自动化部署：
+This project has a complete CI/CD pipeline to ensure code quality and automated deployment:
 
-> 注意：CI/CD徽章将在项目上传到GitHub后自动显示。您需要将GitHub Actions工作流文件中的仓库路径替换为您的实际仓库路径。
+> Note: CI/CD badges will be displayed automatically after uploading the project to GitHub. You need to replace the repository path in the GitHub Actions workflow files with your actual repository path.
 
-### 持续集成 (CI)
+### Continuous Integration (CI)
 
-每次推送到主分支或创建Pull Request时，会自动运行以下检查：
+The following checks run automatically on every push to the main branch or when creating a Pull Request:
 
-- **代码风格检查**：使用ESLint确保代码风格一致
-- **类型检查**：使用TypeScript编译器验证类型安全
-- **构建测试**：确保项目可以成功构建
+- **Code Style Check**: Using ESLint to ensure consistent code style
+- **Type Check**: Using the TypeScript compiler to validate type safety
+- **Build Test**: Ensuring the project can be successfully built
 
-### 安全分析
+### Security Analysis
 
-- **CodeQL分析**：自动检测代码中的安全漏洞
+- **CodeQL Analysis**: Automatically detecting security vulnerabilities in the code
 
-### 持续部署 (CD)
+### Continuous Deployment (CD)
 
-- **自动发布**：当创建新的版本标签（如`v1.0.0`）时，会自动构建项目并创建GitHub Release
+- **Automatic Release**: When creating a new version tag (e.g., `v1.0.0`), the project is automatically built and a GitHub Release is created
 
-### 本地运行CI检查
+### Running CI Checks Locally
 
-在提交代码前，你可以在本地运行以下命令来模拟CI检查：
+Before committing your code, you can run the following commands to simulate CI checks:
 
 ```bash
-# 代码风格检查
+# Code style check
 npm run lint
 
-# 类型检查
+# Type check
 npm run typecheck
 
-# 构建测试
+# Build test
 npm run build
 ```
 
-## 📄 许可证
+## 📄 License
 
-[MIT](LICENSE)
+[MIT](LICENSE) 
