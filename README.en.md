@@ -1,9 +1,16 @@
 # Sparrowhawk
 
-[![CI](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml)
-[![Release](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml)
-[![CodeQL](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml)
+[![CI](https://github.com/your-username/sparrowhawk/workflows/CI/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml)
+[![Release](https://github.com/your-username/sparrowhawk/workflows/Release/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml)
+[![CodeQL](https://github.com/your-username/sparrowhawk/workflows/CodeQL/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg?style=flat&logo=vue.js)](https://vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF.svg?style=flat&logo=vite)](https://vitejs.dev/)
+[![Pinia](https://img.shields.io/badge/Pinia-3.x-F7D336.svg?style=flat&logo=pinia)](https://pinia.vuejs.org/)
+[![Vue Router](https://img.shields.io/badge/Vue_Router-4.x-4FC08D.svg?style=flat&logo=vue.js)](https://router.vuejs.org/)
+[![Vue I18n](https://img.shields.io/badge/Vue_I18n-9.x-4FC08D.svg?style=flat&logo=vue.js)](https://vue-i18n.intlify.dev/)
 
 <div align="right">
   <a href="README.md">中文</a> | <a href="README.en.md">English</a>
@@ -120,6 +127,8 @@ VITE_API_BASE_URL=http://localhost:3000/api
 ## 🔄 CI/CD
 
 This project has a complete CI/CD pipeline to ensure code quality and automated deployment:
+
+> Note: CI/CD badges will be displayed automatically after uploading the project to GitHub. You need to replace the repository path in the GitHub Actions workflow files with your actual repository path.
 
 ### Continuous Integration (CI)
 
