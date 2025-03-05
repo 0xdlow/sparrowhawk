@@ -87,7 +87,7 @@ async function checkAuthentication(userStore: ReturnType<typeof useUserStore>): 
 }
 
 // 全局前置守卫
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async (to, _, next) => {
   // 防止重复导航
   if (navigationState.isNavigating) {
     console.log('Already navigating, preventing new navigation.')
