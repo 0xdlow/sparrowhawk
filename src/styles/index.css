@@ -1,0 +1,60 @@
+/* 导入所有样式文件 */
+@import './variables.css';
+@import './reset.css';
+
+/* 全局共享样式 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mt-1 { margin-top: var(--spacing-mini); }
+.mt-2 { margin-top: var(--spacing-small); }
+.mt-3 { margin-top: var(--spacing-base); }
+.mt-4 { margin-top: var(--spacing-medium); }
+.mt-5 { margin-top: var(--spacing-large); }
+
+.mb-1 { margin-bottom: var(--spacing-mini); }
+.mb-2 { margin-bottom: var(--spacing-small); }
+.mb-3 { margin-bottom: var(--spacing-base); }
+.mb-4 { margin-bottom: var(--spacing-medium); }
+.mb-5 { margin-bottom: var(--spacing-large); }
+
+.ml-1 { margin-left: var(--spacing-mini); }
+.ml-2 { margin-left: var(--spacing-small); }
+.ml-3 { margin-left: var(--spacing-base); }
+.ml-4 { margin-left: var(--spacing-medium); }
+.ml-5 { margin-left: var(--spacing-large); }
+
+.mr-1 { margin-right: var(--spacing-mini); }
+.mr-2 { margin-right: var(--spacing-small); }
+.mr-3 { margin-right: var(--spacing-base); }
+.mr-4 { margin-right: var(--spacing-medium); }
+.mr-5 { margin-right: var(--spacing-large); } 
