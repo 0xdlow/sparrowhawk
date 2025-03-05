@@ -5,6 +5,10 @@
 [![CodeQL](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<div align="right">
+  <a href="README.md">中文</a> | <a href="README.en.md">English</a>
+</div>
+
 现代化的Vue 3 + TypeScript前端项目模板，集成了多种实用功能和最佳实践。
 
 ## ✨ 特性
