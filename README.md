@@ -1,5 +1,10 @@
 # Sparrowhawk
 
+[![CI](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml)
+[![Release](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml)
+[![CodeQL](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 现代化的Vue 3 + TypeScript前端项目模板，集成了多种实用功能和最佳实践。
 
 ## ✨ 特性
@@ -107,6 +112,41 @@ VITE_API_BASE_URL=http://localhost:3000/api
 
 1. 在 `src/i18n/locales/` 目录下创建新的语言文件
 2. 在 `src/i18n/index.ts` 中导入并注册新语言
+
+## 🔄 CI/CD
+
+本项目配置了完整的CI/CD流程，确保代码质量和自动化部署：
+
+### 持续集成 (CI)
+
+每次推送到主分支或创建Pull Request时，会自动运行以下检查：
+
+- **代码风格检查**：使用ESLint确保代码风格一致
+- **类型检查**：使用TypeScript编译器验证类型安全
+- **构建测试**：确保项目可以成功构建
+
+### 安全分析
+
+- **CodeQL分析**：自动检测代码中的安全漏洞
+
+### 持续部署 (CD)
+
+- **自动发布**：当创建新的版本标签（如`v1.0.0`）时，会自动构建项目并创建GitHub Release
+
+### 本地运行CI检查
+
+在提交代码前，你可以在本地运行以下命令来模拟CI检查：
+
+```bash
+# 代码风格检查
+npm run lint
+
+# 类型检查
+npm run typecheck
+
+# 构建测试
+npm run build
+```
 
 ## 📄 许可证
 
