@@ -109,6 +109,84 @@ src/
 - [Vue Router](https://router.vuejs.org/)
 - [Vue I18n](https://vue-i18n.intlify.dev/)
 
+## 🔌 API使用
+
+项目预配置了完整的API服务结构，包括请求拦截、错误处理、认证和重试机制。
+
+### API服务结构
+
+```
+src/api/
+├── config/             # API配置
+│   ├── index.ts        # 基础配置（基础URL、超时等）
+│   └── interceptors.ts # 请求/响应拦截器
+├── helpers/            # API辅助函数
+│   ├── authHelper.ts   # 认证相关辅助函数
+│   ├── cancelHelper.ts # 请求取消辅助函数
+│   ├── errorHandler.ts # 错误处理
+│   └── retryHelper.ts  # 请求重试机制
+├── services/           # API服务
+│   └── userService.ts  # 用户相关API
+└── index.ts            # API入口
+```
+
+### 使用示例
+
+```typescript
+// 导入API服务
+import { userService } from '@/api/services/userService';
+import { defineComponent, ref } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const user = ref(null);
+    const loading = ref(false);
+    const error = ref(null);
+
+    const fetchUser = async (id: string) => {
+      loading.value = true;
+      error.value = null;
+      
+      try {
+        user.value = await userService.getUserById(id);
+      } catch (err) {
+        error.value = err;
+      } finally {
+        loading.value = false;
+      }
+    };
+
+    return { user, loading, error, fetchUser };
+  }
+});
+```
+
+### 创建新的API服务
+
+1. 在 `src/api/services/` 目录下创建新的服务文件，例如 `productService.ts`：
+
+```typescript
+import apiClient from '../index';
+import { Product } from '@/shared/types';
+
+export const productService = {
+  getProducts: () => apiClient.get<Product[]>('/products'),
+  getProductById: (id: string) => apiClient.get<Product>(`/products/${id}`),
+  createProduct: (product: Omit<Product, 'id'>) => apiClient.post<Product>('/products', product),
+  updateProduct: (id: string, product: Partial<Product>) => apiClient.put<Product>(`/products/${id}`, product),
+  deleteProduct: (id: string) => apiClient.delete(`/products/${id}`)
+};
+```
+
+2. 在需要的组件中导入并使用：
+
+```typescript
+import { productService } from '@/api/services/productService';
+
+// 使用服务
+const products = await productService.getProducts();
+```
+
 ## 🔧 自定义配置
 
 ### 环境变量

@@ -109,6 +109,84 @@ src/
 - [Vue Router](https://router.vuejs.org/)
 - [Vue I18n](https://vue-i18n.intlify.dev/)
 
+## 🔌 API Usage
+
+The project has a pre-configured complete API service structure, including request interception, error handling, authentication, and retry mechanisms.
+
+### API Service Structure
+
+```
+src/api/
+├── config/             # API configuration
+│   ├── index.ts        # Basic configuration (base URL, timeout, etc.)
+│   └── interceptors.ts # Request/response interceptors
+├── helpers/            # API helper functions
+│   ├── authHelper.ts   # Authentication related helpers
+│   ├── cancelHelper.ts # Request cancellation helpers
+│   ├── errorHandler.ts # Error handling
+│   └── retryHelper.ts  # Request retry mechanism
+├── services/           # API services
+│   └── userService.ts  # User-related APIs
+└── index.ts            # API entry point
+```
+
+### Usage Example
+
+```typescript
+// Import API service
+import { userService } from '@/api/services/userService';
+import { defineComponent, ref } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const user = ref(null);
+    const loading = ref(false);
+    const error = ref(null);
+
+    const fetchUser = async (id: string) => {
+      loading.value = true;
+      error.value = null;
+      
+      try {
+        user.value = await userService.getUserById(id);
+      } catch (err) {
+        error.value = err;
+      } finally {
+        loading.value = false;
+      }
+    };
+
+    return { user, loading, error, fetchUser };
+  }
+});
+```
+
+### Creating a New API Service
+
+1. Create a new service file in the `src/api/services/` directory, for example `productService.ts`:
+
+```typescript
+import apiClient from '../index';
+import { Product } from '@/shared/types';
+
+export const productService = {
+  getProducts: () => apiClient.get<Product[]>('/products'),
+  getProductById: (id: string) => apiClient.get<Product>(`/products/${id}`),
+  createProduct: (product: Omit<Product, 'id'>) => apiClient.post<Product>('/products', product),
+  updateProduct: (id: string, product: Partial<Product>) => apiClient.put<Product>(`/products/${id}`, product),
+  deleteProduct: (id: string) => apiClient.delete(`/products/${id}`)
+};
+```
+
+2. Import and use in your components:
+
+```typescript
+import { productService } from '@/api/services/productService';
+
+// Use the service
+const products = await productService.getProducts();
+```
+
 ## 🔧 Custom Configuration
 
 ### Environment Variables
