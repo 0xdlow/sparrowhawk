@@ -3,32 +3,32 @@
 const techStack = [
   {
     name: "Vue.js 3",
-    description: "渐进式JavaScript框架",
+    description: "{{ $t('about.techStack.vue.description') }}",
     link: "https://vuejs.org/"
   },
   {
     name: "TypeScript",
-    description: "JavaScript的超集，添加静态类型",
+    description: "{{ $t('about.techStack.typescript.description') }}",
     link: "https://www.typescriptlang.org/"
   },
   {
     name: "Vite",
-    description: "下一代前端构建工具",
+    description: "{{ $t('about.techStack.vite.description') }}",
     link: "https://vitejs.dev/"
   },
   {
     name: "Pinia",
-    description: "Vue的状态管理库",
+    description: "{{ $t('about.techStack.pinia.description') }}",
     link: "https://pinia.vuejs.org/"
   },
   {
     name: "Vue Router",
-    description: "Vue.js的官方路由",
+    description: "{{ $t('about.techStack.router.description') }}",
     link: "https://router.vuejs.org/"
   },
   {
     name: "Vue I18n",
-    description: "Vue.js的国际化插件",
+    description: "{{ $t('about.techStack.i18n.description') }}",
     link: "https://vue-i18n.intlify.dev/"
   }
 ]
@@ -37,43 +37,43 @@ const techStack = [
 const projectStructure = [
   {
     name: "src/api",
-    description: "API服务和HTTP客户端配置"
+    description: "{{ $t('about.projectStructure.api') }}"
   },
   {
     name: "src/assets",
-    description: "静态资源文件（图片、字体等）"
+    description: "{{ $t('about.projectStructure.assets') }}"
   },
   {
     name: "src/components",
-    description: "可复用的Vue组件"
+    description: "{{ $t('about.projectStructure.components') }}"
   },
   {
     name: "src/config",
-    description: "应用配置文件"
+    description: "{{ $t('about.projectStructure.config') }}"
   },
   {
     name: "src/layouts",
-    description: "页面布局组件"
+    description: "{{ $t('about.projectStructure.layouts') }}"
   },
   {
     name: "src/locales",
-    description: "国际化语言文件"
+    description: "{{ $t('about.projectStructure.locales') }}"
   },
   {
     name: "src/routes",
-    description: "路由配置和守卫"
+    description: "{{ $t('about.projectStructure.routes') }}"
   },
   {
     name: "src/stores",
-    description: "Pinia状态存储"
+    description: "{{ $t('about.projectStructure.stores') }}"
   },
   {
     name: "src/utils",
-    description: "工具函数和辅助方法"
+    description: "{{ $t('about.projectStructure.utils') }}"
   },
   {
     name: "src/views",
-    description: "页面视图组件"
+    description: "{{ $t('about.projectStructure.views') }}"
   }
 ]
 </script>
@@ -91,23 +91,23 @@ const projectStructure = [
     </section>
 
     <section class="about-section">
-      <h2 class="section-title">{{ $t('about.techStack') }}</h2>
+      <h2 class="section-title">{{ $t('about.techStack.title') }}</h2>
       <div class="tech-stack">
         <div v-for="(tech, index) in techStack" :key="index" class="tech-item">
           <h3 class="tech-name">
             <a :href="tech.link" target="_blank" rel="noopener">{{ tech.name }}</a>
           </h3>
-          <p class="tech-description">{{ tech.description }}</p>
+          <p class="tech-description">{{ $t(`about.techStack.${tech.name.toLowerCase().replace('.js', '').replace(' ', '')}.description`) }}</p>
         </div>
       </div>
     </section>
 
     <section class="about-section">
-      <h2 class="section-title">{{ $t('about.projectStructure') }}</h2>
+      <h2 class="section-title">{{ $t('about.projectStructure.title') }}</h2>
       <div class="project-structure">
         <div v-for="(item, index) in projectStructure" :key="index" class="structure-item">
           <h3 class="structure-name">{{ item.name }}</h3>
-          <p class="structure-description">{{ item.description }}</p>
+          <p class="structure-description">{{ $t(`about.projectStructure.${item.name.split('/')[1]}`) }}</p>
         </div>
       </div>
     </section>

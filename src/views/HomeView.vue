@@ -34,7 +34,7 @@ const features = [
       <h1 class="title">{{ $t('home.title') }}</h1>
       <p class="subtitle">{{ $t('home.subtitle') }}</p>
       <div class="actions">
-        <a href="https://github.com/your-username/sparrowhawk" target="_blank" class="primary-button">
+        <a href="https://github.com/0xdlow/sparrowhawk" target="_blank" class="primary-button">
           {{ $t('nav.github') }}
         </a>
         <router-link to="/about" class="secondary-button">
@@ -58,7 +58,7 @@ const features = [
       <h2 class="section-title">{{ $t('home.gettingStarted') }}</h2>
       <div class="code-block">
         <pre><code># {{ $t('home.cloneRepo') }}
-git clone https://github.com/your-username/sparrowhawk.git
+git clone https://github.com/0xdlow/sparrowhawk.git
 
 # {{ $t('home.installDeps') }}
 cd sparrowhawk

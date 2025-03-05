@@ -48,8 +48,40 @@ export default {
     title: 'About Sparrowhawk',
     description1: 'Sparrowhawk is a modern Vue 3 + TypeScript frontend project template, designed to provide a well-structured, feature-rich starting point to help developers quickly build high-quality web applications. This template integrates current best practices and popular tools, including Vite build, Pinia state management, Vue Router routing system, and a complete API integration solution.',
     description2: 'Whether building enterprise applications or personal projects, Sparrowhawk provides a solid foundation, allowing you to focus on business logic development without worrying about project architecture and infrastructure setup.',
-    techStack: 'Technology Stack',
-    projectStructure: 'Project Structure',
+    techStack: {
+      title: 'Technology Stack',
+      vue: {
+        description: 'Progressive JavaScript Framework'
+      },
+      typescript: {
+        description: 'JavaScript with syntax for types'
+      },
+      vite: {
+        description: 'Next Generation Frontend Tooling'
+      },
+      pinia: {
+        description: 'State management for Vue'
+      },
+      router: {
+        description: 'Official router for Vue.js'
+      },
+      i18n: {
+        description: 'Internationalization plugin for Vue.js'
+      }
+    },
+    projectStructure: {
+      title: 'Project Structure',
+      api: 'API services and HTTP client configuration',
+      assets: 'Static assets (images, fonts, etc.)',
+      components: 'Reusable Vue components',
+      config: 'Application configuration files',
+      layouts: 'Page layout components',
+      locales: 'Internationalization language files',
+      routes: 'Route configuration and guards',
+      stores: 'Pinia state stores',
+      utils: 'Utility functions and helper methods',
+      views: 'Page view components'
+    },
     developmentGuide: 'Development Guide',
     installDeps: 'Install Dependencies',
     devServer: 'Development Server',
