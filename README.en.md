@@ -1,8 +1,8 @@
 # Sparrowhawk
 
-[![CI](https://github.com/your-username/sparrowhawk/workflows/CI/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/ci.yml)
-[![Release](https://github.com/your-username/sparrowhawk/workflows/Release/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/release.yml)
-[![CodeQL](https://github.com/your-username/sparrowhawk/workflows/CodeQL/badge.svg)](https://github.com/your-username/sparrowhawk/actions/workflows/codeql.yml)
+[![CI](https://github.com/0xdlow/sparrowhawk/workflows/CI/badge.svg)](https://github.com/0xdlow/sparrowhawk/actions/workflows/ci.yml)
+[![Release](https://github.com/0xdlow/sparrowhawk/workflows/Release/badge.svg)](https://github.com/0xdlow/sparrowhawk/actions/workflows/release.yml)
+[![CodeQL](https://github.com/0xdlow/sparrowhawk/workflows/CodeQL/badge.svg)](https://github.com/0xdlow/sparrowhawk/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg?style=flat&logo=vue.js)](https://vuejs.org/)
@@ -42,7 +42,7 @@ A modern Vue 3 + TypeScript front-end project template with various practical fe
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/sparrowhawk.git my-project
+git clone https://github.com/0xdlow/sparrowhawk.git my-project
 
 # Navigate to the project directory
 cd my-project
@@ -56,7 +56,7 @@ git add .
 git commit -m "Initial commit from Sparrowhawk template"
 
 # Link to your remote repository (if you have one)
-git remote add origin https://github.com/your-username/my-project.git
+git remote add origin https://github.com/0xdlow/my-project.git
 git push -u origin main
 ```
 

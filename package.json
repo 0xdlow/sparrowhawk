@@ -18,12 +18,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/sparrowhawk.git"
+    "url": "https://github.com/0xdlow/sparrowhawk.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/sparrowhawk/issues"
+    "url": "https://github.com/0xdlow/sparrowhawk/issues"
   },
-  "homepage": "https://github.com/your-username/sparrowhawk#readme",
+  "homepage": "https://github.com/0xdlow/sparrowhawk#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",
